@@ -409,6 +409,7 @@ HTML;
 
             if (is_array($content)) {
                 array_walk($content, function (&$v) {
+                    $v = strval($v);
                     $v = htmlspecialchars($v);
                 });
             } else {
